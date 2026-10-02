@@ -95,8 +95,8 @@ resource "aws_db_instance" "this" {
   vpc_security_group_ids = var.vpc_security_group_ids
   db_subnet_group_name   = local.db_subnet_group_name
 
-  deletion_protection              = var.deletion_protection
-  multi_az                         = var.multi_az
+  deletion_protection       = var.deletion_protection
+  multi_az                  = var.multi_az
   skip_final_snapshot       = var.skip_final_snapshot
   final_snapshot_identifier = var.final_snapshot_identifier
 
