@@ -86,7 +86,7 @@ run "apply_db_instance" {
     allocated_storage            = 20
     db_name                      = "appdb"
     username                     = "dbadmin"
-    publicly_accessible         = true
+    publicly_accessible          = true
     create_db_subnet_group       = true
     db_subnet_group_name         = "test-db-subnets"
     subnet_ids                   = run.setup_networking.subnet_ids
