@@ -158,7 +158,7 @@ The following input variables are optional (have default values):
 
 ### <a name="input_allocated_storage"></a> [allocated\_storage](#input\_allocated\_storage)
 
-Description: The allocated storage in gigabytes
+Description: (Optional) The allocated storage in gigabytes.
 
 Type: `number`
 
@@ -166,7 +166,7 @@ Default: `20`
 
 ### <a name="input_create"></a> [create](#input\_create)
 
-Description: Whether to create the database instance and associated resources
+Description: (Optional) Whether to create the database instance and associated resources.
 
 Type: `bool`
 
@@ -174,7 +174,7 @@ Default: `true`
 
 ### <a name="input_create_db_credentials_secret"></a> [create\_db\_credentials\_secret](#input\_create\_db\_credentials\_secret)
 
-Description: Controls whether to generate a random master password and store full DB credentials in AWS Secrets Manager.
+Description: (Optional) Controls whether to generate a random master password and store full DB credentials in AWS Secrets Manager.
 
 Type: `bool`
 
@@ -182,7 +182,7 @@ Default: `false`
 
 ### <a name="input_create_db_subnet_group"></a> [create\_db\_subnet\_group](#input\_create\_db\_subnet\_group)
 
-Description: Whether to create a DB subnet group
+Description: (Optional) Whether to create a DB subnet group.
 
 Type: `bool`
 
@@ -190,7 +190,7 @@ Default: `false`
 
 ### <a name="input_db_instance_tags"></a> [db\_instance\_tags](#input\_db\_instance\_tags)
 
-Description: Additional tags for the DB instance
+Description: (Optional) Additional tags for the DB instance.
 
 Type: `map(string)`
 
@@ -198,7 +198,7 @@ Default: `{}`
 
 ### <a name="input_db_name"></a> [db\_name](#input\_db\_name)
 
-Description: The DB name to create. If omitted, no database is created initially
+Description: (Optional) The DB name to create. If omitted, no database is created initially.
 
 Type: `string`
 
@@ -206,7 +206,7 @@ Default: `"appdb"`
 
 ### <a name="input_db_subnet_group_description"></a> [db\_subnet\_group\_description](#input\_db\_subnet\_group\_description)
 
-Description: Description of the DB subnet group created
+Description: (Optional) Description of the DB subnet group created.
 
 Type: `string`
 
@@ -214,7 +214,7 @@ Default: `null`
 
 ### <a name="input_db_subnet_group_name"></a> [db\_subnet\_group\_name](#input\_db\_subnet\_group\_name)
 
-Description: Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If null and `create_db_subnet_group` is true, one will be created.
+Description: (Optional) Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If null and `create_db_subnet_group` is true, one will be created.
 
 Type: `string`
 
@@ -222,7 +222,7 @@ Default: `null`
 
 ### <a name="input_db_subnet_group_tags"></a> [db\_subnet\_group\_tags](#input\_db\_subnet\_group\_tags)
 
-Description: Additional tags for the DB subnet group
+Description: (Optional) Additional tags for the DB subnet group.
 
 Type: `map(string)`
 
@@ -230,7 +230,7 @@ Default: `{}`
 
 ### <a name="input_deletion_protection"></a> [deletion\_protection](#input\_deletion\_protection)
 
-Description: The database can't be deleted when this value is set to true
+Description: (Optional) The database can't be deleted when this value is set to true.
 
 Type: `bool`
 
@@ -238,7 +238,7 @@ Default: `false`
 
 ### <a name="input_engine"></a> [engine](#input\_engine)
 
-Description: The database engine to use
+Description: (Optional) The database engine to use.
 
 Type: `string`
 
@@ -246,7 +246,7 @@ Default: `"postgres"`
 
 ### <a name="input_engine_version"></a> [engine\_version](#input\_engine\_version)
 
-Description: The engine version to use
+Description: (Optional) The engine version to use.
 
 Type: `string`
 
@@ -254,7 +254,7 @@ Default: `"16"`
 
 ### <a name="input_final_snapshot_identifier"></a> [final\_snapshot\_identifier](#input\_final\_snapshot\_identifier)
 
-Description: The name of your final DB snapshot when this DB instance is deleted
+Description: (Optional) The name of your final DB snapshot when this DB instance is deleted.
 
 Type: `string`
 
@@ -262,7 +262,7 @@ Default: `null`
 
 ### <a name="input_identifier"></a> [identifier](#input\_identifier)
 
-Description: The name of the RDS instance
+Description: (Optional) The name of the RDS instance.
 
 Type: `string`
 
@@ -270,7 +270,7 @@ Default: `null`
 
 ### <a name="input_identifier_prefix"></a> [identifier\_prefix](#input\_identifier\_prefix)
 
-Description: Creates a unique identifier beginning with the specified prefix
+Description: (Optional) Creates a unique identifier beginning with the specified prefix.
 
 Type: `string`
 
@@ -278,7 +278,7 @@ Default: `null`
 
 ### <a name="input_instance_class"></a> [instance\_class](#input\_instance\_class)
 
-Description: The instance type of the RDS instance
+Description: (Optional) The instance type of the RDS instance.
 
 Type: `string`
 
@@ -286,7 +286,7 @@ Default: `"db.t3.micro"`
 
 ### <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id)
 
-Description: The ARN for the KMS encryption key. If not specified, the default AWS KMS key will be used.
+Description: (Optional) The ARN for the KMS encryption key. If not specified, the default AWS KMS key will be used.
 
 Type: `string`
 
@@ -294,7 +294,7 @@ Default: `null`
 
 ### <a name="input_max_allocated_storage"></a> [max\_allocated\_storage](#input\_max\_allocated\_storage)
 
-Description: Specifies the value for Storage Autoscaling
+Description: (Optional) Specifies the value for Storage Autoscaling.
 
 Type: `number`
 
@@ -302,7 +302,7 @@ Default: `0`
 
 ### <a name="input_multi_az"></a> [multi\_az](#input\_multi\_az)
 
-Description: Specifies if the RDS instance is multi-AZ
+Description: (Optional) Specifies if the RDS instance is multi-AZ.
 
 Type: `bool`
 
@@ -310,7 +310,7 @@ Default: `false`
 
 ### <a name="input_password"></a> [password](#input\_password)
 
-Description: Password for the master DB user. If null and `create_db_credentials_secret` is true, a random password will be auto-generated.
+Description: (Optional) Password for the master DB user. If null and `create_db_credentials_secret` is true, a random password will be auto-generated.
 
 Type: `string`
 
@@ -318,7 +318,7 @@ Default: `null`
 
 ### <a name="input_port"></a> [port](#input\_port)
 
-Description: The port on which the DB accepts connections
+Description: (Optional) The port on which the DB accepts connections.
 
 Type: `number`
 
@@ -326,7 +326,7 @@ Default: `5432`
 
 ### <a name="input_publicly_accessible"></a> [publicly\_accessible](#input\_publicly\_accessible)
 
-Description: Bool to control if instance is publicly accessible. Defaults to false.
+Description: (Optional) Bool to control if instance is publicly accessible. Defaults to false.
 
 Type: `bool`
 
@@ -334,7 +334,7 @@ Default: `false`
 
 ### <a name="input_putin_khuylo"></a> [putin\_khuylo](#input\_putin\_khuylo)
 
-Description: Do you agree that Putin doesn't respect Ukrainian sovereignty and territorial integrity? More info: https://en.wikipedia.org/wiki/Putin_khuylo!
+Description: (Optional) Do you agree that Putin doesn't respect Ukrainian sovereignty and territorial integrity? More info: https://en.wikipedia.org/wiki/Putin_khuylo!
 
 Type: `bool`
 
@@ -342,7 +342,7 @@ Default: `true`
 
 ### <a name="input_secret_description"></a> [secret\_description](#input\_secret\_description)
 
-Description: Description for the Secrets Manager secret storing DB credentials.
+Description: (Optional) Description for the Secrets Manager secret storing DB credentials.
 
 Type: `string`
 
@@ -350,7 +350,7 @@ Default: `"RDS master credentials managed by Terraform"`
 
 ### <a name="input_secret_name"></a> [secret\_name](#input\_secret\_name)
 
-Description: Name for the Secrets Manager secret storing DB credentials. Defaults to `demo/database/<identifier>`.
+Description: (Optional) Name for the Secrets Manager secret storing DB credentials. Defaults to `demo/database/<identifier>`.
 
 Type: `string`
 
@@ -358,7 +358,7 @@ Default: `null`
 
 ### <a name="input_secret_recovery_window_in_days"></a> [secret\_recovery\_window\_in\_days](#input\_secret\_recovery\_window\_in\_days)
 
-Description: Number of days that AWS Secrets Manager waits before deleting a secret (0 for immediate deletion).
+Description: (Optional) Number of days that AWS Secrets Manager waits before deleting a secret (0 for immediate deletion).
 
 Type: `number`
 
@@ -366,7 +366,7 @@ Default: `0`
 
 ### <a name="input_secret_tags"></a> [secret\_tags](#input\_secret\_tags)
 
-Description: A map of tags to assign to the Secrets Manager secret.
+Description: (Optional) A map of tags to assign to the Secrets Manager secret.
 
 Type: `map(string)`
 
@@ -374,7 +374,7 @@ Default: `{}`
 
 ### <a name="input_skip_final_snapshot"></a> [skip\_final\_snapshot](#input\_skip\_final\_snapshot)
 
-Description: Determines whether a final DB snapshot is created before the DB instance is deleted
+Description: (Optional) Determines whether a final DB snapshot is created before the DB instance is deleted.
 
 Type: `bool`
 
@@ -382,7 +382,7 @@ Default: `true`
 
 ### <a name="input_storage_encrypted"></a> [storage\_encrypted](#input\_storage\_encrypted)
 
-Description: Specifies whether the DB instance is encrypted
+Description: (Optional) Specifies whether the DB instance is encrypted.
 
 Type: `bool`
 
@@ -390,7 +390,7 @@ Default: `true`
 
 ### <a name="input_storage_type"></a> [storage\_type](#input\_storage\_type)
 
-Description: One of 'standard' (magnetic), 'gp2' (general purpose SSD), 'gp3' (general purpose SSD), or 'io1' (provisioned IOPS SSD)
+Description: (Optional) One of 'standard' (magnetic), 'gp2' (general purpose SSD), 'gp3' (general purpose SSD), or 'io1' (provisioned IOPS SSD).
 
 Type: `string`
 
@@ -398,7 +398,7 @@ Default: `"gp2"`
 
 ### <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids)
 
-Description: A list of VPC subnet IDs to create the DB subnet group in
+Description: (Optional) A list of VPC subnet IDs to create the DB subnet group in.
 
 Type: `list(string)`
 
@@ -406,7 +406,7 @@ Default: `[]`
 
 ### <a name="input_tags"></a> [tags](#input\_tags)
 
-Description: A mapping of tags to assign to all resources
+Description: (Optional) A mapping of tags to assign to all resources.
 
 Type: `map(string)`
 
@@ -414,7 +414,7 @@ Default: `{}`
 
 ### <a name="input_timeouts"></a> [timeouts](#input\_timeouts)
 
-Description: Updated Terraform resource management timeouts
+Description: (Optional) Updated Terraform resource management timeouts.
 
 Type: `map(string)`
 
@@ -422,7 +422,7 @@ Default: `{}`
 
 ### <a name="input_username"></a> [username](#input\_username)
 
-Description: Username for the master DB user
+Description: (Optional) Username for the master DB user.
 
 Type: `string`
 
@@ -430,7 +430,7 @@ Default: `"dbadmin"`
 
 ### <a name="input_vpc_security_group_ids"></a> [vpc\_security\_group\_ids](#input\_vpc\_security\_group\_ids)
 
-Description: List of VPC security groups to associate
+Description: (Optional) List of VPC security groups to associate.
 
 Type: `list(string)`
 
